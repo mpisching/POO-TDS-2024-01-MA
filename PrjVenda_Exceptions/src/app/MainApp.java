@@ -13,8 +13,11 @@ import domain.Nacional;
 import domain.Produto;
 import domain.Relatorio;
 import domain.Venda;
+import exceptions.ExceptionVenda;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -27,7 +30,11 @@ public class MainApp {
         
         Fornecedor f = new Internacional();
         
-        Venda.setEmpresa("Alimentos do Brasil");
+        try {
+            Venda.setEmpresa("Alimentos do Brasil");
+        } catch (ExceptionVenda ex) {
+            System.out.println("Mensagem: " + ex.getMessage());
+        }
         
         Cliente cliente = new Cliente(1, "Fulano", "24234", "234234", "rua tal", LocalDate.now());
 
