@@ -76,7 +76,8 @@ public class ProdutoDAO{
     }
 
     public List<Produto> listar() {
-        String sql =  "SELECT p.id as produto_id, p.nome as produto_nome, p.descricao as produto_descricao, p.preco as produto_preco, "
+        String sql =  "SELECT p.id as produto_id, p.nome as produto_nome, "
+                + "p.descricao as produto_descricao, p.preco as produto_preco, "
                 + "c.id as categoria_id, c.descricao as categoria_descricao "
                 + "FROM produto p INNER JOIN categoria c ON c.id = p.id_categoria;";
         List<Produto> retorno = new ArrayList<>();
