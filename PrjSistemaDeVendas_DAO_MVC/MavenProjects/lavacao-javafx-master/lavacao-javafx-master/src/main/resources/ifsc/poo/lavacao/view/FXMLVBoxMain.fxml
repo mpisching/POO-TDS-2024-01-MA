@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ifsc.poo.lavacao.controller.FXMLVBoxMainController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" onAction="#handleMenuItemCadastrosClientes" text="Cadastros">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Categorias" />
+                  <MenuItem fx:id="menuItemCadastrosClientes" mnemonicParsing="false" onAction="#handleMenuItemCadastrosClientes" text="Clientes" />
+                  <MenuItem mnemonicParsing="false" text="Produtos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Processos">
+            <items>
+              <MenuItem fx:id="menuItemProcessosVendas" mnemonicParsing="false" onAction="#handleMenuItemProcessosVendas" text="Vendas" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Gráficos">
+               <items>
+                  <MenuItem fx:id="menuItemGraficosVendasPorMes" mnemonicParsing="false" onAction="#handleMenuItemGraficosVendasPorMes" text="Vendas por Mês" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Relatórios">
+            <items>
+              <MenuItem fx:id="menuItemRelatoriosQuantidadeProdutos" mnemonicParsing="false" onAction="#handleMenuItemRelatoriosQuantidadeProdutos" text="Quantidade de Produtos em Estoque" />
+              <MenuItem fx:id="menuItemRelatoriosQuantidadeProdutosPorCategoria" mnemonicParsing="false" onAction="#handleMenuItemRelatoriosQuantidadeProdutosPorCategoria" text="Quantidade de Produtos em Estoque Por Categoria" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" />
+   </children>
+</VBox>

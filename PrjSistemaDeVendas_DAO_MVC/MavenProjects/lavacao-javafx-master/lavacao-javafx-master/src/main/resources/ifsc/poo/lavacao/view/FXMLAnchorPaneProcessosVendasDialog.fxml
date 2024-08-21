@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="362.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ifsc.poo.lavacao.controller.FXMLAnchorPaneProcessosVendasDialogController">
+   <children>
+      <Group layoutX="48.0" layoutY="-11.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <Button fx:id="buttonConfirmar" layoutX="107.0" layoutY="144.0" mnemonicParsing="false" onAction="#handleButtonConfirmar" prefHeight="25.0" prefWidth="70.0" text="Confirmar" />
+            <Button fx:id="buttonCancelar" layoutX="184.0" layoutY="144.0" mnemonicParsing="false" onAction="#handleButtonCancelar" prefHeight="25.0" prefWidth="70.0" text="Cancelar" />
+         </children>
+      </Group>
+      <GridPane layoutX="122.0" layoutY="25.0" prefHeight="288.0" prefWidth="379.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label fx:id="labelClienteNome" text="Data" GridPane.rowIndex="1" />
+            <Label fx:id="labelClienteCPF" text="Valor" GridPane.rowIndex="5" />
+            <Label fx:id="labelClienteTelefone" text="Pago" GridPane.rowIndex="2" />
+            <TextField fx:id="textFieldVendaValor" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="129.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Cliente" />
+            <DatePicker fx:id="datePickerVendaData" prefHeight="25.0" prefWidth="194.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <CheckBox fx:id="checkBoxVendaPago" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="comboBoxVendaCliente" prefHeight="25.0" prefWidth="193.0" promptText="Selecione o cliente..." GridPane.columnIndex="1" />
+            <Label text="Produto" GridPane.rowIndex="3" />
+            <TableView fx:id="tableViewItensDeVenda" prefHeight="96.0" prefWidth="195.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+              <columns>
+                <TableColumn fx:id="tableColumnItemDeVendaProduto" prefWidth="150.0" text="Produto" />
+                <TableColumn fx:id="tableColumnItemDeVendaQuantidade" prefWidth="81.0" text="Quantidade" />
+                  <TableColumn fx:id="tableColumnItemDeVendaValor" prefWidth="73.0" text="Valor" />
+              </columns>
+            </TableView>
+            <Label text="Itens" GridPane.rowIndex="4" />
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <ComboBox fx:id="comboBoxVendaProduto" prefHeight="25.0" prefWidth="195.0" promptText="Selecione o produto..." />
+                  <TextField fx:id="textFieldVendaItemDeVendaQuantidade" prefHeight="25.0" prefWidth="46.0" />
+                  <Button fx:id="buttonAdicionar" alignment="BASELINE_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handleButtonAdicionar" text="Adicionar" />
+               </children>
+            </HBox>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="33.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="306.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="144.0" minHeight="10.0" prefHeight="136.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

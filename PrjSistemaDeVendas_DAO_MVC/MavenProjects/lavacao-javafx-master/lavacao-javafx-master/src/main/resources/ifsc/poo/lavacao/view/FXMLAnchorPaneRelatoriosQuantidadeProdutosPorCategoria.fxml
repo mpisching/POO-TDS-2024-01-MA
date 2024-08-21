@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="376.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ifsc.poo.lavacao.controller.FXMLAnchorPaneRelatoriosQuantidadeProdutosPorCategoriaController">
+   <children>
+      <TableView fx:id="tableViewProdutos" layoutX="131.0" layoutY="51.0" prefHeight="325.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="51.0">
+        <columns>
+          <TableColumn fx:id="tableColumnProdutoCodigo" prefWidth="58.0" text="Código" />
+          <TableColumn fx:id="tableColumnProdutoNome" prefWidth="184.0" text="Nome" />
+            <TableColumn fx:id="tableColumnProdutoPreco" prefWidth="102.0" text="Preço" />
+            <TableColumn fx:id="tableColumnProdutoQuantidade" prefWidth="85.0" text="Quantidade" />
+            <TableColumn fx:id="tableColumnProdutoCategoria" prefWidth="170.0" text="Categoria" />
+        </columns>
+      </TableView>
+      <Button fx:id="buttonImprimir" layoutX="518.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleImprimir" text="Imprimir" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Label fx:id="labelCategoria" layoutX="14.0" layoutY="14.0" text="Categoria">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboBoxCategorias" layoutX="89.0" layoutY="10.0" onAction="#carregarTableViewProdutos" prefWidth="150.0" />
+   </children>
+</AnchorPane>
