@@ -11,7 +11,7 @@ CREATE TABLE fornecedor(
     email varchar(100),
     fone varchar(20),
     CONSTRAINT pk_fornecedor PRIMARY KEY(id)
-) engine = InnoDB;
+);
 
 CREATE TABLE nacional(
 	id_fornecedor INT NOT NULL REFERENCES fornecedor(id),
@@ -20,7 +20,7 @@ CREATE TABLE nacional(
     CONSTRAINT fk_nacional_fornecedor FOREIGN KEY (id_fornecedor) REFERENCES fornecedor(id) 
 		ON DELETE CASCADE
         ON UPDATE CASCADE
-) engine = InnoDB;
+);
 
 CREATE TABLE internacional(
 	id_fornecedor INT NOT NULL REFERENCES fornecedor(id),
@@ -30,14 +30,14 @@ CREATE TABLE internacional(
     CONSTRAINT fk_internacional_fornecedor FOREIGN KEY (id_fornecedor) REFERENCES fornecedor(id) 
 		ON DELETE CASCADE
         ON UPDATE CASCADE
-) engine = InnoDB;
+);
 
 CREATE TABLE categoria(
    id int NOT NULL auto_increment,
    descricao  varchar(50) NOT NULL,
    CONSTRAINT pk_categoria
       PRIMARY KEY(id)
-) engine = InnoDB;
+);
 
 CREATE TABLE produto(
    id int NOT NULL auto_increment,
@@ -54,7 +54,7 @@ CREATE TABLE produto(
    CONSTRAINT fk_produto_fornecedor
       FOREIGN KEY(id_fornecedor)
       REFERENCES fornecedor(id)      
-) engine = InnoDB;
+);
 
 /*TABELA ESTOQUE COM RELACIONAMENTO 1:1 PARA PRODUTO*/
 CREATE TABLE estoque(
@@ -65,7 +65,7 @@ CREATE TABLE estoque(
     situacao ENUM('ATIVO', 'INATIVO', 'BLOQUEADO') NOT NULL DEFAULT 'INATIVO',
     CONSTRAINT pk_estoque PRIMARY KEY (id_produto),
     CONSTRAINT fk_estoque_produto FOREIGN KEY (id_produto) REFERENCES produto(id) ON DELETE CASCADE
-) engine = InnoDB;
+);
 
 CREATE TABLE cliente(
    id int NOT NULL auto_increment,
@@ -77,7 +77,7 @@ CREATE TABLE cliente(
    data_nascimento date,
    CONSTRAINT pk_cliente
       PRIMARY KEY(id)
-) engine = InnoDB;
+);
 
 INSERT INTO cliente(nome, cpf, telefone, email, endereco, data_nascimento) VALUES('Edgar','111.111.111-11','(11) 1111-1111', 'edgar@ifsc.edu.br', 'av. mauro ramos', '1970-04-20');
 INSERT INTO cliente(nome, cpf, telefone, email, endereco, data_nascimento) VALUES('Marilene','222.222.222-22','(22) 2222-2121', 'marilene@ifsc.edu.br', 'av. mauro ramos', '1979-10-18');
