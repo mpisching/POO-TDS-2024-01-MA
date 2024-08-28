@@ -11,7 +11,7 @@ CREATE TABLE fornecedor(
     email varchar(100),
     fone varchar(20),
     CONSTRAINT pk_fornecedor PRIMARY KEY(id)
-);
+) engine=InnoDB;
 
 CREATE TABLE nacional(
 	id_fornecedor INT NOT NULL REFERENCES fornecedor(id),
@@ -20,7 +20,7 @@ CREATE TABLE nacional(
     CONSTRAINT fk_nacional_fornecedor FOREIGN KEY (id_fornecedor) REFERENCES fornecedor(id) 
 		ON DELETE CASCADE
         ON UPDATE CASCADE
-);
+) engine=InnoDB;
 
 CREATE TABLE internacional(
 	id_fornecedor INT NOT NULL REFERENCES fornecedor(id),
@@ -30,14 +30,14 @@ CREATE TABLE internacional(
     CONSTRAINT fk_internacional_fornecedor FOREIGN KEY (id_fornecedor) REFERENCES fornecedor(id) 
 		ON DELETE CASCADE
         ON UPDATE CASCADE
-);
+) engine=InnoDB;
 
 CREATE TABLE categoria(
    id int NOT NULL auto_increment,
    descricao  varchar(50) NOT NULL,
    CONSTRAINT pk_categoria
       PRIMARY KEY(id)
-);
+) engine=InnoDB;
 
 CREATE TABLE produto(
    id int NOT NULL auto_increment,
@@ -54,7 +54,7 @@ CREATE TABLE produto(
    CONSTRAINT fk_produto_fornecedor
       FOREIGN KEY(id_fornecedor)
       REFERENCES fornecedor(id)      
-);
+) engine=InnoDB;
 
 /*TABELA ESTOQUE COM RELACIONAMENTO 1:1 PARA PRODUTO*/
 CREATE TABLE estoque(
@@ -69,7 +69,7 @@ CREATE TABLE estoque(
         REFERENCES produto(id) 
         ON DELETE CASCADE 
         ON UPDATE CASCADE
-);
+) engine=InnoDB;
 
 CREATE TABLE cliente(
    id int NOT NULL auto_increment,
@@ -81,7 +81,7 @@ CREATE TABLE cliente(
    data_nascimento date,
    CONSTRAINT pk_cliente
       PRIMARY KEY(id)
-);
+) engine=InnoDB;
 
 /*TABELAS PARA IMPLEMENTAÇÃO DO CONCEITO DE CLASSES ASSOCIATIVAS OU CLASSES INTERMEDIÁRIAS, QUE 
   IMPLEMENTAM A RELAÇÃO DE MULTIPLICIDADE MUITOS PARA MUITOS (M:N)
@@ -101,7 +101,7 @@ CREATE TABLE venda(
    CONSTRAINT fk_venda_cliente
       FOREIGN KEY(id_cliente)
       REFERENCES cliente(id)
-);
+) engine=InnoDB;
 
 CREATE TABLE item_de_venda(
    id int NOT NULL auto_increment,
@@ -118,7 +118,7 @@ CREATE TABLE item_de_venda(
       FOREIGN KEY(id_venda)
       REFERENCES venda(id)
       ON DELETE CASCADE
-);  
+) engine=InnoDB;  
 /*FIM DA IMPLEMENTAÇÃO DAS TABELAS M:N */
 
 INSERT INTO cliente(nome, cpf, telefone, email, endereco, data_nascimento) VALUES('Edgar','111.111.111-11','(11) 1111-1111', 'edgar@ifsc.edu.br', 'av. mauro ramos', '1970-04-20');
