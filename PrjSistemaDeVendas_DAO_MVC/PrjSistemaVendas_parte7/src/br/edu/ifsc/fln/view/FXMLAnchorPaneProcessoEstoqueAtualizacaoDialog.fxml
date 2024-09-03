@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="208.0" prefWidth="431.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsc.fln.controller.FXMLAnchorPaneProcessoEstoqueAtualizacaoController">
+   <children>
+      <GridPane layoutX="25.0" layoutY="24.0" prefHeight="117.0" prefWidth="362.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="97.2" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="10.0" prefWidth="264.4" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="labelProdutoNome" text="Nome:" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelProdutoQuantidade" text="Qtd. Mínima:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelProdutoPreco" text="Qtd. Máxima:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="tfNome" editable="false" prefHeight="25.0" prefWidth="274.0" promptText="nome do produto" GridPane.columnIndex="1" />
+            <TextField fx:id="tfQtdMinima" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tfQtdMaxima" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="labelProdutoCategoria" text="Situação:" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </Label>
+            <ChoiceBox fx:id="cbSituacao" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Group layoutX="240.0" layoutY="165.0">
+         <children>
+            <Button fx:id="btConfirmar" mnemonicParsing="false" onAction="#handleBtConfirmar" text="Confirmar" />
+            <Button fx:id="btCancelar" layoutX="78.0" mnemonicParsing="false" onAction="#handleBtCancelar" prefHeight="25.0" prefWidth="69.0" text="Cancelar" />
+         </children>
+      </Group>
+   </children>
+</AnchorPane>
