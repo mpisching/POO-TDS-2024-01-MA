@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Aluno/Documents/GitHub/POO-TDS-2024-01-MA/PrjSistemaDeVendas_DAO_MVC/PrjSistemaVendas_parte7/src/br/edu/ifsc/fln/model/dao/ClienteDAO.java</file>
+            <file>file:/C:/Users/Aluno/Documents/GitHub/POO-TDS-2024-01-MA/PrjSistemaDeVendas_DAO_MVC/PrjSistemaVendas_parte7/src/br/edu/ifsc/fln/controller/FXMLAnchorPaneCadastroCategoriaController.java</file>
+            <file>file:/C:/Users/Aluno/Documents/GitHub/POO-TDS-2024-01-MA/PrjSistemaDeVendas_DAO_MVC/PrjSistemaVendas_parte7/src/br/edu/ifsc/fln/model/dao/CategoriaDAO.java</file>
+            <file>file:/C:/Users/Aluno/Documents/GitHub/POO-TDS-2024-01-MA/PrjSistemaDeVendas_DAO_MVC/PrjSistemaVendas_parte7/src/br/edu/ifsc/fln/model/dao/VendaDAO.java</file>
+            <file>file:/C:/Users/Aluno/Documents/GitHub/POO-TDS-2024-01-MA/PrjSistemaDeVendas_DAO_MVC/PrjSistemaVendas_parte7/src/br/edu/ifsc/fln/controller/FXMLAnchorPaneProcessoEstoqueMovimentoDialogController.java</file>
+            <file>file:/C:/Users/Aluno/Documents/GitHub/POO-TDS-2024-01-MA/PrjSistemaDeVendas_DAO_MVC/PrjSistemaVendas_parte7/src/br/edu/ifsc/fln/controller/FXMLAnchorPaneCadastroCategoriaDialogController.java</file>
+            <file>file:/C:/Users/Aluno/Documents/GitHub/POO-TDS-2024-01-MA/PrjSistemaDeVendas_DAO_MVC/PrjSistemaVendas_parte7/src/br/edu/ifsc/fln/model/domain/Estoque.java</file>
+        </group>
     </open-files>
 </project-private>
